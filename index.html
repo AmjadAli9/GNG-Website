@@ -2496,5 +2496,677 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </script>
 
+/* =========================================================
+   GNG EXOTIC COLLECTIONS — PRODUCT CATALOGUE
+   26 Products | Updated with actual uploaded product photos
+
+   Image folder:
+   public/images/products/
+
+   Prices and stock are SAMPLE values.
+   Replace with actual prices and inventory before launch.
+
+   Add future products using unique product IDs.
+   ========================================================= */
+
+const PRODUCTS = [
+
+  // ===================== HIJABS =====================
+
+  {
+    id: 'h01',
+    category: 'Hijabs',
+    type: 'Georgette',
+    name: 'Premium Georgette Hijab',
+    price: 399,
+    description: 'Lightweight georgette with a graceful drape. A versatile choice for everyday and occasion styling.',
+    image:"/public/images/Premium Georgette Hijab.jpeg",
+    colours: [
+      ['Plum', '#6d35a8', 12],
+      ['Black', '#202027', 18],
+      ['Ivory', '#eee8dd', 10],
+      ['Mauve', '#ad8bc4', 8]
+    ]
+  },
+
+  {
+    id: 'h02',
+    category: 'Hijabs',
+    type: 'Georgette shimmer party wear',
+    name: 'Georgette Shimmer Hijab with Tassels',
+    price: 599,
+    description: 'Crinkled shimmer texture with a subtle sparkle and decorative tassel finish. The photographed shade range includes turquoise blue, black, blush pink and charcoal grey.',
+    image:"/public/images/George shimmer.jpg",
+    colours: [
+      ['Turquoise Blue', '#269dbb', 8],
+      ['Black', '#17171b', 8],
+      ['Blush Pink', '#d99caf', 7],
+      ['Charcoal Grey', '#777b80', 6],
+      ['Deep Black', '#101014', 5]
+    ]
+  },
+
+  {
+    id: 'h03',
+    category: 'Hijabs',
+    type: 'Satin Floral printed',
+    name: 'Satin Floral Print Hijab',
+    price: 499,
+    description: 'Smooth satin feel with a delicate floral print.', 
+     image:"/public/images/Satin Floral Print.jpeg",
+    colours: [
+      ['Rose', '#c9879c', 8],
+      ['Ivory', '#eee8dd', 7],
+      ['Navy', '#253b65', 6]
+    ]
+  },
+
+  {
+    id: 'h04',
+    category: 'Hijabs',
+    type: 'Organza',
+    name: 'Elegant Organza Hijab',
+    price: 549,
+    description: 'Airy organza texture for a polished layered look.', 
+     image:"/public/images/Organza ombre party wear 1.jpeg",
+    colours: [
+      ['Champagne', '#d8c59d', 6],
+      ['Black', '#202027', 7],
+      ['Mauve', '#ad8bc4', 5]
+    ]
+  },
+
+  {
+    id: 'h05',
+    category: 'Hijabs',
+    type: 'Crinkle cotton',
+    name: 'Crinkle Cotton Hijab with Tassels',
+    price: 299,
+    description: 'Soft crinkle cotton with a naturally textured finish and matching tassel edges. The photos show mocha taupe, warm beige, ivory, soft white and blush-cream shades.',
+     image:"/public/images/Crinkle cotton with tassels 1.jpeg",
+    colours: [
+
+                             
+      ['Mocha Taupe', '#927b6b', 12],
+      ['Warm Beige', '#b39a7e', 12],
+      ['Ivory', '#eee9dd', 14],
+      ['Soft White', '#f5f1e8', 14],
+      ['Blush Cream', '#e8d5ce', 10]
+    ]
+  },
+
+  {
+    id: 'h06',
+    category: 'Hijabs',
+    type: 'Chiffon',
+    name: 'Classic Chiffon Hijab — Soft Shades',
+    price: 329,
+    description: 'Light, flowing chiffon for versatile styling. Actual photographed shades include peach blush, taupe, mint green, stone grey, ivory, caramel mustard, sky blue, olive green and aqua.',
+  image:"/public/images/chiffon shades.jpeg",
+    colours: [
+      ['Peach Blush', '#e9c2b2', 12],
+      ['Taupe', '#a28d82', 12],
+      ['Mint Green', '#a9dfcb', 12],
+      ['Stone Grey', '#b7b4b0', 10],
+      ['Ivory', '#eee9df', 12],
+      ['Caramel Mustard', '#c99a4e', 8],
+      ['Sky Blue', '#80c7e5', 12],
+      ['Olive Green', '#557b42', 10],
+      ['Aqua', '#8acbc9', 8]
+    ]
+  },
+
+  {
+    id: 'h07',
+    category: 'Hijabs',
+    type: 'Stone-Work Party Hijab',
+    name: 'Stone-Work Party Hijab',
+    price: 799,
+    description: 'Decorative stone details for festive and party wear.',
+     image:"/public/images/Georgette with diamond stone work 1.jpeg",
+    colours: [
+      ['Black', '#202027', 5],
+      ['Silver', '#b9bbc4', 4],
+      ['Plum', '#6d35a8', 3]
+    ]
+  },
+
+  {
+    id: 'h08',
+    category: 'Hijabs',
+    type: 'Malaysian chiffon',
+    name: 'Malaysian Chiffon Hijab',
+    price: 449,
+    description: 'Soft chiffon with a refined, smooth finish.',
+     image:"/public/images/Malaysian Chiffon Hijab.jpeg",
+    colours: [
+      ['Dusty Rose', '#c9879c', 7],
+      ['Grey', '#85858c', 8],
+      ['Teal', '#438c8a', 6]
+    ]
+  },
+
+  {
+    id: 'h09',
+    category: 'Hijabs',
+    type: 'Modal cotton',
+    name: 'Modal Cotton Hijab',
+    price: 449,
+    description: 'Soft-touch modal cotton for effortless daily comfort.',
+     image:"/public/images/Premium Modal cottonb 1.jpeg",
+    colours: [
+      ['Mauve', '#ad8bc4', 8],
+      ['Nude', '#c9a58c', 9],
+      ['Navy', '#253b65', 7]
+    ]
+  },
+
+  {
+    id: 'h10',
+    category: 'Hijabs',
+    type: 'Premium Bamboo Jersey',
+    name: 'Premium Bamboo Jersey Hijab',
+    price: 599,
+    description: 'Stretchy, soft jersey with a comfortable secure feel.',
+     image:"/public/images/Premium Bamboo Jersey Hijab.jpg",
+    colours: [
+      ['Black', '#202027', 10],
+      ['Mocha', '#725440', 8],
+      ['Stone', '#aaa49c', 7]
+    ]
+  },
+
+  {
+    id: 'h11',
+    category: 'Hijabs',
+    type: 'Pure Cotton',
+    name: 'Pure Cotton Hijab',
+    price: 279,
+    description: 'Breathable cotton for simple everyday styling.',
+     image:"/public/images/Soft Computer cotton 1.jpeg",
+    colours: [
+      ['White', '#f4f1eb', 15],
+      ['Black', '#202027', 18],
+      ['Olive', '#73744c', 12]
+    ]
+  },
+
+  {
+    id: 'h12',
+    category: 'Hijabs',
+    type: 'Velvet satin',
+    name: 'Velvet Satin Hijab',
+    price: 649,
+    description: 'A rich finish for elevated evening and occasion looks.',
+     image:"/public/images/Satin embossed marble print 1.jpeg",
+    colours: [
+      ['Maroon', '#722d43', 5],
+      ['Emerald', '#28644e', 4],
+      ['Black', '#202027', 6]
+    ]
+  },
+
+  {
+    id: 'h13',
+    category: 'Hijabs',
+    type: 'Tissue ombre',
+    name: 'Tissue Ombre Hijab',
+    price: 699,
+    description: 'A subtle ombre effect with a festive tissue finish.',
+     image:"/public/images/Organza ombre party wear 1.jpeg",
+    colours: [
+      ['Rose Gold', '#c58e80', 4],
+      ['Champagne', '#d8c59d', 5],
+      ['Plum', '#6d35a8', 3]
+    ]
+  },
+
+  {
+    id: 'h14',
+    category: 'Hijabs',
+    type: 'Chiffon satin print',
+    name: 'Chiffon Satin Print Hijab',
+    price: 499,
+    description: 'A beautiful printed blend for a softly polished look.',
+     image:"/public/images/Satin embossed marble print 1.jpeg",
+    colours: [
+      ['Blush', '#d7a2ad', 7],
+      ['Blue', '#557da4', 6],
+      ['Olive', '#73744c', 5]
+    ]
+  },
+{
+    id: 'h15',
+    category: 'Hijabs',
+    type: 'Tissue with glitter shine party wear',
+    name: 'Tissue with glitter shine',
+    price: 799,
+    description: 'A beautiful printed blend for a softly polished look.',
+     image:"/public/images/Tissue with glitter shine party wear 1.jpeg",
+    colours: [
+      ['Blush', '#d7a2ad', 7],
+      ['Blue', '#557da4', 6],
+      ['Olive', '#73744c', 5]
+    ]
+  },
+  {
+    id: 'h16',
+    category: 'Hijabs',
+    type: 'Ribbed chiffon',
+    name: 'Ribbed chiffon',
+    price: 699,
+    description: 'A Textured chiffon with a unique ribbed finish.',
+     image:"/public/images/Ribbed chiffon 1.jpeg",
+    colours: [
+      ['Blush', '#d7a2ad', 7],
+      ['Blue', '#557da4', 6],
+      ['Olive', '#73744c', 5]
+    ]
+  },
+  {
+    id: 'h17',
+    category: 'Hijabs',
+    type: 'Premium chiffon nude shadesn',
+    name: 'chiffon nude shadesn',
+    price: 1299,
+    description: 'A Textured chiffon with a unique ribbed finish.',
+     image:"/public/images/Premium chiffon nude shades 1.jpeg",
+    colours: [
+      ['Blush', '#d7a2ad', 7],
+      ['Blue', '#557da4', 6],
+      ['green', '#73744c', 5]
+    ]
+  },
+  {
+    id: 'h18',
+    category: 'Hijabs',
+    type: 'Premium Bubble chiffon',
+    name: 'Bubble chiffon',
+    price: 1199,
+    description: 'A Textured chiffon with a unique ribbed finish.',
+     image:"/public/images/Premium Bubble chiffon 1.jpeg",
+    colours: [
+      ['Blush', '#d7a2ad', 7],
+      ['Blue', '#557da4', 6],
+      ['green', '#73744c', 5]
+    ]
+  },
+  {
+    id: 'h19',
+    category: 'Hijabs',
+    type: 'Party wear chiffon shimmer',
+    name: 'chiffon shimmer',
+    price: 999,
+    description: 'A Textured chiffon with a unique ribbed finish.',
+     image:"/public/images/Party wear chiffon shimmer 3.jpeg",
+    colours: [
+      ['Blush', '#d7a2ad', 7],
+      ['Blue', '#557da4', 6],
+      ['green', '#73744c', 5]
+    ]
+  },
+    {
+    id: 'h20',
+    category: 'Hijabs',
+    type: 'Shimmer party wear',
+    name: 'Shimmer party wear',
+    price: 999,
+    description: 'A Textured chiffon with a unique ribbed finish.',
+     image:"/public/images/Shimmer party wear 1.jpeg",
+    colours: [
+      ['Blush', '#d7a2ad', 7],
+      ['Blue', '#557da4', 6],
+      ['green', '#73744c', 5]
+    ]
+  },
+   {
+    id: 'h21',
+    category: 'Hijabs',
+    type: 'Premium party wear branded',
+    name: 'Premium party wear ',
+    price: 1399,
+    description: 'A Textured chiffon with a unique ribbed finish.',
+     image:"/public/images/Premium party wear branded 3.jpeg",
+    colours: [
+      ['Blush', '#d7a2ad', 7],
+      ['Blue', '#557da4', 6],
+      ['green', '#73744c', 5]
+    ]
+  },
+    {
+    id: 'h22',
+    category: 'Hijabs',
+    type: 'Muna chiffon party wear',
+    name: 'Muna chiffon',
+    price: 699,
+    description: 'A Textured chiffon with a unique ribbed finish.',
+     image:"/public/images/Muna chiffon party wear 1.jpeg",
+    colours: [
+      ['Blush', '#d7a2ad', 7],
+      ['Blue', '#557da4', 6],
+      ['green', '#73744c', 5]
+    ]
+  },
+
+  // ===================== NIQAB =====================
+
+  {
+    id: 'n01',
+    category: 'Niqab',
+    type: 'Niqab',
+    name: 'Everyday Soft Niqab',
+    price: 199,
+    description: 'Lightweight face covering with a comfortable tie-back.',
+     image:"/public/images/Everyday Soft Niqab.jpg",
+    colours: [
+      ['Black', '#202027', 20],
+      ['Navy', '#253b65', 8],
+      ['Brown', '#725440', 6]
+    ]
+  },
+
+  // ===================== ACCESSORIES =====================
+
+  {
+    id: 'a01',
+    category: 'Accessories',
+    type: 'Bridal Clutches',
+    name: 'Bridal Embellished Clutch',
+    price: 1499,
+    description: 'Statement occasion clutch with embellished detailing.',
+     image:"/public/images/Bridal Embellished Clutch.jpeg",
+
+    colours: [
+      ['Champagne', '#d8c59d', 3],
+      ['Rose Gold', '#c58e80', 2],
+      ['Silver', '#b9bbc4', 2]
+    ]
+  },
+
+  {
+    id: 'a02',
+    category: 'Accessories',
+    type: 'Batwa',
+    name: 'Traditional Batwa',
+    price: 699,
+    description: 'A classic accessory for festive and traditional outfits.',
+     image:"/public/images/Traditional Batwa.jpg",
+    colours: [
+      ['Gold', '#c9a65a', 4],
+      ['Maroon', '#722d43', 3]
+    ]
+  },
+
+  {
+    id: 'a03',
+    category: 'Accessories',
+    type: 'Potli',
+    name: 'Embroidered Potli Bag',
+    price: 899,
+    description: 'A charming potli bag for celebrations and gifting.',
+     image:"/public/images/Embroidered Potli Bag.jpeg",
+    colours: [
+      ['Gold', '#c9a65a', 4],
+      ['Plum', '#6d35a8', 3],
+      ['Rose', '#c9879c', 3]
+    ]
+  },
+
+  {
+    id: 'a04',
+    category: 'Accessories',
+    type: 'Premium party wear clutches',
+    name: 'Premium Party Clutch',
+    price: 1299,
+    description: 'Elegant party clutch to complete your occasion look.',
+     image:"/public/images/Premium Party Clutch.jpeg",
+    colours: [
+      ['Black', '#202027', 4],
+      ['Silver', '#b9bbc4', 3],
+      ['Champagne', '#d8c59d', 3]
+    ]
+  },
+
+  {
+    id: 'a05',
+    category: 'Accessories',
+    type: 'Premium sling bags',
+    name: 'Premium Sling Bag',
+    price: 1199,
+    description: 'A versatile compact bag for day-to-evening styling.',
+     image:"/public/images/Premium Sling Bag.jpeg",
+    colours: [
+      ['Black', '#202027', 5],
+      ['Tan', '#aa805c', 4],
+      ['Plum', '#6d35a8', 3]
+    ]
+  },
+
+  {
+    id: 'a06',
+    category: 'Accessories',
+    type: 'Premium handbags',
+    name: 'Premium Handbag',
+    price: 1599,
+    description: 'A refined everyday handbag with a timeless silhouette.',
+     image:"/public/images/Premium Handbag.jpeg",
+    colours: [
+      ['Black', '#202027', 4],
+      ['Tan', '#aa805c', 3],
+      ['Ivory', '#eee8dd', 2]
+    ]
+  },
+
+  {
+    id: 'a07',
+    category: 'Accessories',
+    type: 'Hijab caps - one size fits all',
+    name: 'Comfort Hijab Cap',
+    price: 99,
+    description: 'Stretch-fit inner cap designed for comfortable layering.',
+     image:"/public/images/Comfort Hijab Cap.jpg",
+    colours: [
+      ['Black', '#202027', 30],
+      ['White', '#f4f1eb', 25],
+      ['Nude', '#c9a58c', 20]
+    ]
+  },
+
+  {
+    id: 'a08',
+    category: 'Accessories',
+    type: 'Tube cap',
+    name: 'Stretch Tube Cap',
+    price: 129,
+    description: 'Simple stretch tube cap for everyday hijab styling.',
+     image:"/public/images/Stretch Tube Cap.jpg",
+    colours: [
+      ['Black', '#202027', 25],
+      ['Nude', '#c9a58c', 18],
+      ['White', '#f4f1eb', 16]
+    ]
+  },
+
+  {
+    id: 'a09',
+    category: 'Accessories',
+    type: 'Tie cap',
+    name: 'Tie-Back Hijab Cap',
+    price: 149,
+    description: 'Comfortable tie-back fit for an adjustable feel.',
+     image:"/public/images/Tie-Back Hijab Cap.jpg",
+    colours: [
+      ['Black', '#202027', 16],
+      ['White', '#f4f1eb', 12],
+      ['Mocha', '#725440', 10]
+    ]
+  },
+
+  {
+    id: 'a10',
+    category: 'Accessories',
+    type: 'Full cap',
+    name: 'Full Coverage Cap',
+    price: 179,
+    description: 'Full coverage inner cap with a soft stretch finish.',
+     image:"/public/images/Full Coverage Cap.jpeg",
+    colours: [
+      ['Black', '#202027', 16],
+      ['Nude', '#c9a58c', 12]
+    ]
+  },
+
+  {
+    id: 'a11',
+    category: 'Accessories',
+    type: 'Imported Nose piece',
+    name: 'Imported Nose Piece',
+    price: 199,
+    description: 'Available in Big and Medium sizes. Select your preferred size.',
+     image:"/public/images/Imported Nose Piece.jpeg",
+    colours: [
+      ['Big', '#d9c7b6', 8],
+      ['Medium', '#c5aa96', 8]
+    ]
+  }
+
+];
+const $ = (s) => document.querySelector(s);
+const money = (n) => new Intl.NumberFormat('en-IN', { style:'currency', currency:'INR', maximumFractionDigits:0 }).format(Number(n)||0);
+let config = { shopName:'GNG Exotic Collections', email:'goldnglowexoticcollection01@gmail.com', whatsapp:'919700811131', upi:'Q055134754@ybl', shipping:60, freeShippingAbove:1300 };
+let activeFilter = 'All';
+let cart = JSON.parse(localStorage.getItem('gngCart') || '[]');
+const categories = [
+  {name:'Hijabs',mark:'H',desc:'Everyday & occasion styles'},
+  {name:'Niqab',mark:'N',desc:'Thoughtful face coverings'},
+  {name:'Accessories',mark:'A',desc:'Clutches, bags & essentials'},
+  {name:'All',mark:'✦',desc:'Explore the full collection'}
+];
+function saveCart(){localStorage.setItem('gngCart',JSON.stringify(cart));renderCart();}
+function productById(id){return PRODUCTS.find(p=>p.id===id)}
+function cartQty(){return cart.reduce((s,x)=>s+x.qty,0)}
+function subtotal(){return cart.reduce((s,x)=>s+x.price*x.qty,0)}
+function shipping(){return subtotal() >= config.freeShippingAbove ? 0 : (cart.length ? config.shipping : 0)}
+function total(){return subtotal()+shipping()}
+function toast(message){const el=$('#toast');el.textContent=message;el.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.classList.remove('show'),2400)}
+function renderCategories(){
+  $('#categoryGrid').innerHTML=categories.map(c=>`<button class="category-tile" data-category="${c.name}" data-mark="${c.mark}"><span>${c.desc}</span><b>${c.name==='All'?'Shop everything':c.name}</b><i>↗</i></button>`).join('');
+  $('#categoryGrid').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>setFilter(b.dataset.category)));
+}
+function renderFilters(){
+  const names=['All','Hijabs','Niqab','Accessories'];
+  $('#filterPills').innerHTML=names.map(n=>`<button class="filter-pill ${activeFilter===n?'active':''}" data-filter="${n}">${n}</button>`).join('');
+  $('#filterPills').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>setFilter(b.dataset.filter)));
+}
+function setFilter(value){activeFilter=value;renderFilters();renderProducts();$('#shop').scrollIntoView({behavior:'smooth'});}
+function renderProducts(){
+  const q=$('#searchInput').value.trim().toLowerCase(); const sort=$('#sortSelect').value;
+  let list=PRODUCTS.filter(p=>(activeFilter==='All'||p.category===activeFilter)&&(!q||`${p.name} ${p.type} ${p.description}`.toLowerCase().includes(q)));
+  if(sort==='low')list.sort((a,b)=>a.price-b.price);if(sort==='high')list.sort((a,b)=>b.price-a.price);if(sort==='name')list.sort((a,b)=>a.name.localeCompare(b.name));
+  $('#productGrid').innerHTML=list.length?list.map(p=>{
+    const options=p.colours.map((c,i)=>`<option value="${i}" ${c[2]<=0?'disabled':''}>${c[0]}${c[2]<=0?' — Sold out':''}</option>`).join('');
+    const firstAvailable=p.colours.findIndex(c=>c[2]>0);
+    return `<article class="product-card" data-product="${p.id}"><div class="product-visual" style="--swatch:${p.colours[Math.max(firstAvailable,0)][1]}"><span class="product-tag">${p.category.toUpperCase()}</span><span class="product-monogram">GNG</span>${p.image?`<img src="${p.image}" alt="${p.name}" loading="lazy">`:''}</div><div class="product-info"><span class="product-type">${p.type}</span><h3>${p.name}</h3><p class="product-desc">${p.description}</p><div class="product-price">${money(p.price)}</div><div class="product-selects"><select class="colour-select" aria-label="Choose colour" ${firstAvailable<0?'disabled':''}>${options}</select><button class="add-btn" ${firstAvailable<0?'disabled':''}>${firstAvailable<0?'Sold out':'Add to bag +'}</button></div></div></article>`;
+  }).join(''):'<p class="empty-cart">No products found. Try another search or category.</p>';
+  $('#productGrid').querySelectorAll('.product-card').forEach(card=>{
+    const p=productById(card.dataset.product), select=card.querySelector('select'), visual=card.querySelector('.product-visual');
+    if(select&&p){if(p.colours.findIndex(c=>c[2]>0)>=0)select.value=String(p.colours.findIndex(c=>c[2]>0));select.addEventListener('change',()=>{visual.style.setProperty('--swatch',p.colours[Number(select.value)][1]);});}
+    card.querySelector('.add-btn')?.addEventListener('click',()=>{const c=p.colours[Number(select.value)];if(!c||c[2]<=0)return toast('That colour is sold out.');const key=`${p.id}-${c[0]}`;const existing=cart.find(x=>x.key===key);const inCart=existing?.qty||0;if(inCart>=c[2])return toast('Available sample stock limit reached.');if(existing)existing.qty++;else cart.push({key,id:p.id,name:p.name,colour:c[0],price:p.price,qty:1,stock:c[2]});saveCart();toast(`${p.name} added to your bag.`);});
+  });
+}
+function renderCart(){
+  $('#cartCount').textContent=cartQty();$('#drawerCount').textContent=`(${cartQty()})`;
+  $('#cartSubtotal').textContent=money(subtotal());$('#cartShipping').textContent=shipping()===0?'FREE':money(shipping());$('#cartTotal').textContent=money(total());
+  $('#shippingHint').textContent=subtotal()>=config.freeShippingAbove?'You have unlocked free delivery.':`Add ${money(config.freeShippingAbove-subtotal())} more for free delivery.`;
+  $('#cartItems').innerHTML=cart.length?cart.map(x=>`<div class="cart-line"><div class="cart-thumb">G</div><div><h4>${x.name}</h4><small>${x.colour} · ${money(x.price)}</small><div class="qty-control"><button data-action="minus" data-key="${x.key}">−</button><b>${x.qty}</b><button data-action="plus" data-key="${x.key}">+</button></div><button class="remove-btn" data-action="remove" data-key="${x.key}">Remove</button></div><div class="cart-line-price">${money(x.price*x.qty)}</div></div>`).join(''):'<div class="empty-cart">Your bag is waiting for something lovely.<br><br><a class="text-link" href="#shop" id="emptyShop">Explore the collection →</a></div>';
+  $('#cartItems').querySelectorAll('[data-action]').forEach(b=>b.addEventListener('click',()=>{
+    const item=cart.find(x=>x.key===b.dataset.key);if(!item)return;
+    if(b.dataset.action==='minus')item.qty--;if(b.dataset.action==='plus'){if(item.qty>=item.stock)return toast('Sample stock limit reached.');item.qty++;}if(b.dataset.action==='remove')item.qty=0;
+    cart=cart.filter(x=>x.qty>0);saveCart();
+  }));
+  $('#checkoutButton').disabled=!cart.length;
+}
+function openCart(){ $('#overlay').classList.add('show');$('#cartDrawer').classList.add('open');$('#cartDrawer').setAttribute('aria-hidden','false'); }
+function closeCart(){ $('#overlay').classList.remove('show');$('#cartDrawer').classList.remove('open');$('#cartDrawer').setAttribute('aria-hidden','true'); }
+function renderCheckout(){
+  $('#checkoutItems').innerHTML=cart.map(x=>`<div class="checkout-item"><span>${x.name}<small>${x.colour} · Qty ${x.qty}</small></span><b>${money(x.price*x.qty)}</b></div>`).join('');
+  $('#checkoutSubtotal').textContent=money(subtotal());$('#checkoutShipping').textContent=shipping()===0?'FREE':money(shipping());$('#checkoutTotal').textContent=money(total());$('#amountDue').textContent=money(total());
+  $('#upiId').textContent=config.upi;
+  const upiUrl=`upi://pay?pa=${encodeURIComponent(config.upi)}&pn=${encodeURIComponent(config.shopName)}&am=${encodeURIComponent(total().toFixed(2))}&cu=INR&tn=${encodeURIComponent('GNG order payment')}`;
+  $('#upiAppButton').href=upiUrl;
+}
+function openCheckout(){if(!cart.length)return;closeCart();renderCheckout();$('#checkoutModal').classList.add('show');$('#checkoutModal').setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
+function closeCheckout(){ $('#checkoutModal').classList.remove('show');$('#checkoutModal').setAttribute('aria-hidden','true');document.body.style.overflow=''; }
+function checkReady(){const f=$('#checkoutForm');const file=$('#paymentScreenshot').files[0];const tx=f.elements.transactionId.value.trim();$('#placeOrder').disabled=!(f.checkValidity()&&file&&tx&&$('#confirmPayment').checked&&cart.length);}
+$('#openCart').addEventListener('click',openCart);$('#closeCart').addEventListener('click',closeCart);$('#overlay').addEventListener('click',closeCart);$('#checkoutButton').addEventListener('click',openCheckout);$('#closeCheckout').addEventListener('click',closeCheckout);
+$('#searchInput').addEventListener('input',renderProducts);$('#sortSelect').addEventListener('change',renderProducts);
+$('#copyUpi').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(config.upi);toast('UPI ID copied.');}catch{toast(`UPI ID: ${config.upi}`);}});
+$('#paymentScreenshot').addEventListener('change',()=>{const f=$('#paymentScreenshot').files[0];$('#fileName').textContent=f?f.name:'No file selected';if(f&&f.size>5*1024*1024){$('#paymentScreenshot').value='';$('#fileName').textContent='File is larger than 5 MB';toast('Screenshot must be 5 MB or smaller.');}checkReady();});
+$('#checkoutForm').addEventListener('input',checkReady);$('#confirmPayment').addEventListener('change',checkReady);
+$('#checkoutForm').addEventListener('submit',async(e)=>{
+  e.preventDefault();const form=e.currentTarget;$('#formError').textContent='';checkReady();if($('#placeOrder').disabled||!form.reportValidity())return;
+  const fd=new FormData(form);fd.append('items',JSON.stringify(cart.map(x=>({name:x.name,colour:x.colour,qty:x.qty,price:x.price}))));fd.append('subtotal',String(subtotal()));fd.append('shipping',String(shipping()));fd.append('total',String(total()));
+  $('#placeOrder').disabled=true;$('#placeOrder').textContent='Submitting order…';
+  try{
+    const response=await fetch('/api/orders',{method:'POST',body:fd});const data=await response.json();if(!response.ok)throw new Error(data.error||'Order could not be submitted.');
+    const order=data.order;const lines=order.items.map(x=>`• ${x.name} | ${x.colour} | Qty ${x.qty} | ${money(x.price*x.qty)}`).join('\n');
+    const message=`Hello ${config.shopName}, I have placed an order.\nOrder ID: ${data.orderId}\nName: ${order.customer.name}\nPhone: ${order.customer.phone}\nAddress: ${order.customer.address}, ${order.customer.landmark}, ${order.customer.city}, ${order.customer.state} - ${order.customer.pincode}\n\nItems:\n${lines}\n\nSubtotal: ${money(order.subtotal)}\nDelivery: ${money(order.shipping)}\nTotal paid: ${money(order.total)}\nUPI transaction ID: ${order.transactionId}\n\nI will attach my payment screenshot here. Please verify my payment.`;
+    $('#successOrderId').textContent=data.orderId;$('#emailStatus').textContent=data.emailSent?'Order email and payment screenshot sent to the store email.':'Order saved on the website server. Store email is not configured yet; please also send the order through WhatsApp.';
+    $('#whatsappOrder').href=`https://wa.me/${data.whatsapp}?text=${encodeURIComponent(message)}`;
+    $('#successModal').classList.add('show');$('#successModal').setAttribute('aria-hidden','false');cart=[];saveCart();form.reset();$('#fileName').textContent='No file selected';closeCheckout();
+  }catch(err){$('#formError').textContent=err.message;}
+  finally{$('#placeOrder').textContent='Submit order';checkReady();}
+});
+$('#closeSuccess').addEventListener('click',()=>{$('#successModal').classList.remove('show');$('#successModal').setAttribute('aria-hidden','true');});
+document.querySelectorAll('[data-filter-link]').forEach(a=>a.addEventListener('click',()=>setFilter(a.dataset.filterLink)));
+$('#footerWhatsApp').addEventListener('click',(e)=>{e.preventDefault();window.open(`https://wa.me/${config.whatsapp}?text=${encodeURIComponent('Hello GNG Exotic Collections, I would like some help with your products.')}`,'_blank','noopener');});
+$('#year').textContent=new Date().getFullYear();
+renderCategories();renderFilters();renderProducts();renderCart();
+fetch('/api/config').then(r=>r.json()).then(c=>{config={...config,...c};$('#upiId').textContent=config.upi;$('#footerWhatsApp').href=`https://wa.me/${config.whatsapp}`;}).catch(()=>{});
+
+/* ==============================
+   GNG OFFER POPUP FUNCTIONALITY
+================================ */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const popup = document.getElementById("offerPopup");
+  const closeButton = document.getElementById("closeOffer");
+  const shopButton = document.getElementById("offerShopNow");
+
+  if (!popup || !closeButton || !shopButton) return;
+
+  // Show once per browser session
+  if (!sessionStorage.getItem("gngOfferSeen")) {
+    setTimeout(() => {
+      popup.classList.add("show");
+      popup.setAttribute("aria-hidden", "false");
+      sessionStorage.setItem("gngOfferSeen", "true");
+    }, 1800);
+  }
+
+  function closePopup() {
+    popup.classList.remove("show");
+    popup.setAttribute("aria-hidden", "true");
+  }
+
+  closeButton.addEventListener("click", closePopup);
+
+  shopButton.addEventListener("click", closePopup);
+
+  popup.addEventListener("click", (event) => {
+    if (event.target === popup) {
+      closePopup();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closePopup();
+    }
+  });
+
+});
+
 </body>
 </html>
